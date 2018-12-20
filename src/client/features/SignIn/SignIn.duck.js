@@ -7,7 +7,8 @@ export const { actions, initial, reducer } = autodux({
 		password: '',
 		token: '',
 		loading: false,
-		success: false
+		success: false,
+		redirectUrl: ""
 	},
 	actions: {
 		sendSignInInfo: (state, { email, password, token }) => ({
@@ -20,6 +21,7 @@ export const { actions, initial, reducer } = autodux({
 			return ({
 				...state,
 				success: true,
+				redirectUrl: res.redirectUrl
 			})
 		}
 	}

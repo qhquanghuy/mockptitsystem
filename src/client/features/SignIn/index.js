@@ -14,12 +14,14 @@ const SignIn = ({
 	loading,
 	updateEmail,
 	updatePassword,
+	redirectUrl
 }) => (
 	<SignInComponent
 		handleSubmit={ handleSubmit }
 		loading={ loading }
 		updateEmail={ updateEmail }
 		updatePassword={ updatePassword }
+		redirectUrl = {redirectUrl}
 	/>
 );
 

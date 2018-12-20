@@ -85,7 +85,11 @@ app.post('/signin', (req, res) => {
 			headers: { 'Content-Type': 'application/json' },
 		})
 			.then(res => res.json())
-			.then(json => res.send(json));
+			.then(json => {
+				console.log(json)
+				// res.redirect(json.redirectUrl)
+				res.send(json)
+			});
 	}
 	
 })
